@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('comment', 'HomeController@saveComment')->name('comment.save');
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
